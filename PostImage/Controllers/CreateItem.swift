@@ -6,13 +6,15 @@
 //
 
 import UIKit
-
+import BSImagePicker
+import Photos
 class CreateItem: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     let selectImageBTn = UIButton()
     let UploadImageBTN = UIButton()
     let image = UIImageView()
     let titl = UITextField()
     let desc = UITextField()
+    private var selectedImages: [UIImage] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         AddImageView()
@@ -46,11 +48,28 @@ class CreateItem: UIViewController,UIImagePickerControllerDelegate,UINavigationC
     }
     @objc func SelectImageeClicked(){
         print("Select Image Clicked")
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = false
-        present(imagePicker, animated: true, completion: nil)
+       
+        let imagePicker = ImagePickerController()
+
+        presentImagePicker(imagePicker, select: { (asset) in
+            // User selected an asset. Do something with it. Perhaps begin processing/upload?
+        }, deselect: { (asset) in
+            // User deselected an asset. Cancel whatever you did when asset was selected.
+        }, cancel: { (assets) in
+            // User canceled selection.
+        }, finish: { (assets) in
+            self.selectedImages = []
+            let options: PHImageRequestOptions = PHImageRequestOptions()
+            options.deliveryMode = .highQualityFormat
+ 
+            for asset in assets {
+                PHImageManager.default().requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: options) { (image, info) in
+                    
+                    self.selectedImages.append(image!)
+                    //Add Collection instead of image
+                }
+            }
+        })
     }
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let ChoosedImage = info[.originalImage] as! UIImage
@@ -62,7 +81,7 @@ class CreateItem: UIViewController,UIImagePickerControllerDelegate,UINavigationC
     func AddImageView(){
         self.view.addSubview(image)
         image.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([image.centerXAnchor.constraint(equalTo: view.centerXAnchor),image.centerYAnchor.constraint(equalTo: view.centerYAnchor),image.heightAnchor.constraint(equalToConstant: 250),image.widthAnchor.constraint(equalToConstant: 250)])
+        NSLayoutConstraint.activate([image.centerXAnchor.constraint(equalTo: view.centerXAnchor),image.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: 100),image.heightAnchor.constraint(equalToConstant: 250),image.widthAnchor.constraint(equalToConstant: 250)])
         image.contentMode = .scaleToFill
         image.clipsToBounds = true
         image.image = #imageLiteral(resourceName: "1")

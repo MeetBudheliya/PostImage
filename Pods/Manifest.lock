@@ -1,16 +1,29 @@
 PODS:
   - Alamofire (5.4.1)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - BSImagePicker (3.3.1)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 5.2)
+  - AlamofireImage (~> 4.1)
+  - BSImagePicker (~> 3.1)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireImage
+    - BSImagePicker
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 1af093c0f3bfea6125a22ce07e0abd10efa807d2
+PODFILE CHECKSUM: cf423bf7cdd1db6f748f9d6616ca2c65f75165f8
 
 COCOAPODS: 1.9.3

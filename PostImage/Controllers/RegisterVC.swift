@@ -11,6 +11,9 @@ enum ApiError:Error{
     case DecodingProblem
     case OtherProblem
 }
+protocol SendIdPassToLogin{
+    func sendIdPassword(id:String,password:String)
+}
 class RegisterVC: UIViewController {
     @IBOutlet weak var HideShow: UIButton!
     @IBOutlet weak var warningLBL: UILabel!
@@ -20,6 +23,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var phonetxt: UITextField!
     @IBOutlet weak var passwordtxt: UITextField!
     @IBOutlet weak var confirmPasswordtxt: UITextField!
+    var idPass:SendIdPassToLogin?
     override func viewDidLoad() {
         super.viewDidLoad()
         //       if HideShow.isSelected == true
@@ -85,6 +89,7 @@ class RegisterVC: UIViewController {
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         }catch let error {
             print(error.localizedDescription)
+            print("reqestPostError")
         }
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -92,19 +97,23 @@ class RegisterVC: UIViewController {
         let task =  URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
             
             guard let jsonData = data else {
-                
+                print("Data Not Found")
                 return
             }
-            do {
-                if let json = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? [String] {
-                  //  print(json)
-                    print(json)
-                
+            do{
+                if let json = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? [String:Any] {
+             print(json)
                     
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                        self.idPass?.sendIdPassword(id: self.phonetxt.text!, password: self.passwordtxt.text!)
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                   
                 }
                 
-            } catch let error {
+            }catch let error {
                 print(error.localizedDescription)
+                print("DataDecodeError")
             }
         })
         task.resume()
