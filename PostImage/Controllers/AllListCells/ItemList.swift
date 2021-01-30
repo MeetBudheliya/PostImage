@@ -6,12 +6,13 @@
 //
 
 import UIKit
-
+import Alamofire
 class ItemList: UITableViewCell {
 
     @IBOutlet weak var imgCollection: UICollectionView!
     @IBOutlet weak var titl: UILabel!
     @IBOutlet weak var desc: UILabel!
+    var imgData = [String]()
     var x = 0
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +26,7 @@ class ItemList: UITableViewCell {
     }
     @objc func scrollToNextCell(){
         self.x = self.x + 1
-        if self.x < 5 {
+        if self.x < imgData.count {
             let indexPath = IndexPath(item: x, section: 0)
             self.imgCollection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }else{
@@ -42,12 +43,18 @@ class ItemList: UITableViewCell {
 }
 extension ItemList:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return imgData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imgCell", for: indexPath) as! imgCell
-        cell.img.image = #imageLiteral(resourceName: "1")
+       
+        AF.request(imgData[indexPath.row], method: .get).responseImage { (responses) in
+            guard let image = responses.value else{
+                return
+            }
+            cell.img.image = image
+        }
         return cell
     }
     

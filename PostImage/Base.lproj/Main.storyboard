@@ -72,28 +72,28 @@
                                                     </cells>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXr-eO-Vjg">
-                                                    <rect key="frame" x="150" y="30.5" width="48" height="24"/>
+                                                    <rect key="frame" x="150" y="35.5" width="48" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ewff wweffwefwerf werfwefeffdfasf awefawefawerawer awe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMf-i0-pTU">
-                                                    <rect key="frame" x="150" y="64.5" width="249" height="59.5"/>
+                                                    <rect key="frame" x="150" y="64.5" width="249" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="DMf-i0-pTU" firstAttribute="top" secondItem="uXr-eO-Vjg" secondAttribute="bottom" constant="10" id="1lO-P8-bIg"/>
+                                                <constraint firstItem="DMf-i0-pTU" firstAttribute="top" secondItem="uXr-eO-Vjg" secondAttribute="bottom" constant="5" id="1lO-P8-bIg"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uXr-eO-Vjg" secondAttribute="trailing" constant="15" id="4oh-gk-dY9"/>
                                                 <constraint firstItem="VZQ-fb-vJT" firstAttribute="leading" secondItem="X0K-bL-3DT" secondAttribute="leading" constant="15" id="8JK-wI-9I5"/>
                                                 <constraint firstItem="DMf-i0-pTU" firstAttribute="leading" secondItem="uXr-eO-Vjg" secondAttribute="leading" id="Blb-Qc-mPf"/>
                                                 <constraint firstAttribute="trailing" secondItem="DMf-i0-pTU" secondAttribute="trailing" constant="15" id="K9e-Ad-63d"/>
                                                 <constraint firstAttribute="bottom" secondItem="VZQ-fb-vJT" secondAttribute="bottom" constant="10" id="KUg-fl-WbU"/>
                                                 <constraint firstItem="uXr-eO-Vjg" firstAttribute="leading" secondItem="VZQ-fb-vJT" secondAttribute="trailing" constant="15" id="asF-CG-Pc5"/>
-                                                <constraint firstItem="uXr-eO-Vjg" firstAttribute="bottom" secondItem="VZQ-fb-vJT" secondAttribute="centerY" constant="-10" id="ehp-ET-dyt"/>
-                                                <constraint firstAttribute="bottom" secondItem="DMf-i0-pTU" secondAttribute="bottom" constant="5" id="iLZ-nq-FUc"/>
+                                                <constraint firstItem="uXr-eO-Vjg" firstAttribute="bottom" secondItem="VZQ-fb-vJT" secondAttribute="centerY" constant="-5" id="ehp-ET-dyt"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DMf-i0-pTU" secondAttribute="bottom" constant="5" id="iLZ-nq-FUc"/>
                                                 <constraint firstItem="VZQ-fb-vJT" firstAttribute="top" secondItem="X0K-bL-3DT" secondAttribute="top" constant="10" id="l5c-jS-HHk"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -138,10 +138,44 @@
                     <view key="view" contentMode="scaleToFill" id="b46-0I-GZN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="igt-hS-29x">
+                                <rect key="frame" x="20" y="388" width="374" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4ew-rN-cv1"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="5" id="U2w-rJ-BAv">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zeD-W0-dc5">
+                                        <rect key="frame" x="0.0" y="-4" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w3q-Fg-WZZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j6t-6m-OwU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="igt-hS-29x" firstAttribute="leading" secondItem="j6t-6m-OwU" secondAttribute="leading" constant="20" id="Ojz-L3-s7K"/>
+                            <constraint firstItem="igt-hS-29x" firstAttribute="centerY" secondItem="b46-0I-GZN" secondAttribute="centerY" id="fZ4-qQ-skV"/>
+                            <constraint firstItem="j6t-6m-OwU" firstAttribute="trailing" secondItem="igt-hS-29x" secondAttribute="trailing" constant="20" id="kxc-Sf-zxT"/>
+                            <constraint firstItem="igt-hS-29x" firstAttribute="centerX" secondItem="b46-0I-GZN" secondAttribute="centerX" id="yYy-2D-Mpr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dQC-Cw-vhi"/>
+                    <connections>
+                        <outlet property="selecteddCollection" destination="igt-hS-29x" id="b6o-6z-H1T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41a-KO-0nO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

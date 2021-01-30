@@ -25,7 +25,8 @@ class LoginVC: UIViewController,SendIdPassToLogin{
     override func viewDidLoad() {
         super.viewDidLoad()
         btn.layer.cornerRadius = 15
-        
+        mobileTXT.text = "123456788"
+        PasswordTXT.text = "admin1234"
     }
     override func viewDidAppear(_ animated: Bool) {
         self.mobileTXT.text = regID
